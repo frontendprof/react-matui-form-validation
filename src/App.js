@@ -5,7 +5,7 @@ import MultistepForm from './components/MultistepForm';
 function App() {
   return (
     <div className="App">
-      <h2>Salaam</h2>
+
       <Route path="/" component={MultistepForm} />
     </div>
   );

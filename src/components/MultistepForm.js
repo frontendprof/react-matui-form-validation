@@ -37,7 +37,7 @@ const MultistepForm = () => {
     function getStepsContent(stepIndex){
         switch(stepIndex){
             case 0:
-                return <StepOne />;
+                return <StepOne />
 
             case 1:
                 return "Step Two (CHOOSE PLAN)";
@@ -53,7 +53,7 @@ const MultistepForm = () => {
     const classes=useStyles();
     return (
         <div className={classes.root} >
-            <h3>Main Component</h3>
+            <h3 style={{ textAlign:"center" }}>Main Component</h3>
             <Stepper alternativeLabel activeStep={activeStep}>
                 {steps.map(step=>(
                     <Step key={step}>
