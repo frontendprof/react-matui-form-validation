@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import {
     Typography,
     Button,
@@ -10,13 +10,14 @@ import {
     FormControl,
     OutlinedInput,
     IconButton,
-    InputAdornment,
-    Visibility,
-    VisibilityOff
-} from "@material-ui/core";
+    InputAdornment} from "@material-ui/core";
+import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import SendSharpIcon from '@material-ui/icons/SendSharp';
 import {makeStyles} from "@material-ui/core/styles";
 import IntlTelInput from 'react-intl-tel-input';
 import "react-intl-tel-input/dist/main.css";
+
 
 const useStyles=makeStyles({
     mainContainer:{
@@ -34,10 +35,32 @@ const useStyles=makeStyles({
     inputField:{
         width:"100%",
         margin:"1rem 0"
+    },
+    btn:{
+        width:"100%",
+        height:"3rem",
+        backgroundColor:"teal",
+        color:"white",
+        "&:hover":{
+            backgroundColor:"teal",
+            color:"gold"
+        }
     }
 })
 
 const StepOne = () => {
+
+    const[showPassVal,setShowPassVal]=useState(false);
+    const[confirmPass,setConfirmPass]=useState(false);
+
+    const handleshowPass=()=>{
+        setShowPassVal(!showPassVal)
+    }
+
+    const handleConfirmPass=()=>{
+        setConfirmPass(!confirmPass)
+    }
+
     const classes=useStyles();
     return (
         <div className={classes.mainContainer}>
@@ -70,16 +93,40 @@ const StepOne = () => {
                     />
 
                     <FormControl variant="outlined" className={classes.inputField}>
-                        <InputLabel>Pasvordingiz</InputLabel>
+                        <InputLabel >Pasvordingiz</InputLabel>
                         <OutlinedInput 
-                            labelWidth={75}
+                            labelWidth={95}
+                            type={showPassVal?"text":"password"}
                             endAdornment={
                                 <InputAdornment position="end">
-                                    <IconButton edge="end"></IconButton>
+                                    <IconButton edge="end" onClick={handleshowPass}>
+                                        {showPassVal?<Visibility />:<VisibilityOff />}
+                                    </IconButton>
                                 </InputAdornment>
                             }
                         />
                     </FormControl>
+
+                    <FormControl variant="outlined" className={classes.inputField}>
+                        <InputLabel >Pasvordni Tasdiqlang</InputLabel>
+                        <OutlinedInput 
+                            labelWidth={155}
+                            type={confirmPass?"text":"password"}
+                            endAdornment={
+                                <InputAdornment position="end">
+                                    <IconButton edge="end" onClick={handleConfirmPass}>
+                                        {confirmPass?<Visibility />:<VisibilityOff />}
+                                    </IconButton>
+                                </InputAdornment>
+                            }
+                        />
+                    </FormControl>
+
+                    <>
+                        <Button variant="contained" type="submit" className={classes.btn} endIcon={<SendSharpIcon />}>
+                            Sign Up
+                        </Button>
+                    </>
                 </form>
             </div>
            
