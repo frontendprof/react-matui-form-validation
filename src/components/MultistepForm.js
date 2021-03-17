@@ -17,7 +17,7 @@ const useStyles=makeStyles({
 })
 
 
-const MultiStepForm = () => {
+const MultistepForm = () => {
 
     const [activeStep,setActiveStep]=useState(0)
 
@@ -78,4 +78,4 @@ const MultiStepForm = () => {
     )
 }
 
-export default MultiStepForm
+export default MultistepForm

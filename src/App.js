@@ -1,6 +1,6 @@
 import './App.css';
 import {Route} from "react-router-dom";
-import MultiStepForm from './components/MultiStepForm';
+import MultistepForm from './components/MultistepForm';
 
 function App() {
   return (
