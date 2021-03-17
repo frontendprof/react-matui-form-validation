@@ -30,3 +30,5 @@
 1. Implementing map array function on plans array
 2. Enclosing it with makeStyles styling feature of material ui
 3. Logic on steps transition upon button click by onClick event handler
+
+### StepOne component
