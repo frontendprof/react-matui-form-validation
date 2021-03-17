@@ -6,6 +6,7 @@ import StepOne from './StepOne';
 
 
 
+
 const useStyles=makeStyles({
     root:{
         width:"50%",
@@ -37,6 +38,7 @@ const MultistepForm = () => {
         switch(stepIndex){
             case 0:
                 return <StepOne />;
+
             case 1:
                 return "Step Two (CHOOSE PLAN)";
             case 2:
