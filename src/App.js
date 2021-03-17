@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <h2>Salaam</h2>
-      <Route path="/" component={MultiStepForm} />
+      <Route path="/" component={MultistepForm} />
     </div>
   );
 }

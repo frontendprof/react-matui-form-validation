@@ -2,6 +2,8 @@
 import React,{ useState } from 'react';
 import {makeStyles} from "@material-ui/core/styles"
 import {Stepper,Step,StepLabel,Typography,Button} from "@material-ui/core";
+import StepOne from './StepOne';
+
 
 
 
@@ -35,7 +37,8 @@ const MultistepForm = () => {
     function getStepsContent(stepIndex){
         switch(stepIndex){
             case 0:
-                return "Step One (SIGN UP)";
+                return <StepOne />;
+
             case 1:
                 return "Step Two (CHOOSE PLAN)";
             case 2:
