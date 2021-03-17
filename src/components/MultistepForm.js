@@ -51,7 +51,7 @@ const MultistepForm = () => {
     const classes=useStyles();
     return (
         <div className={classes.root} >
-            <h3>Main Component</h3>
+            <h3 style={{ textAlign:"center" }}>Main Component</h3>
             <Stepper alternativeLabel activeStep={activeStep}>
                 {steps.map(step=>(
                     <Step key={step}>

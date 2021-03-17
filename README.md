@@ -4,6 +4,7 @@
 - npm install @material-ui/core
 - npm install @material-ui/icons
 - npm react-router-dom
+- npm install react-intl-tel-input
 
 ### Initial setup
 
